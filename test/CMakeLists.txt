@@ -80,6 +80,8 @@ function(add_rocwmma_test TEST_TARGET TEST_SOURCE)
     target_compile_definitions(${TEST_TARGET} PRIVATE ROCWMMA_EXTENDED_TESTS)
   endif()
 
+  target_compile_options(${TEST_TARGET} PRIVATE "--save-temps")
+
   # Add support to build the target's assembly files
   if(ROCWMMA_BUILD_ASSEMBLY)
     foreach(file_name ${TEST_SOURCE})
