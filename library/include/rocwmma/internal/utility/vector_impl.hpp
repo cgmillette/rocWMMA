@@ -2,7 +2,7 @@
  *
  * MIT License
  *
- * Copyright (C) 2021-2024 Advanced Micro Devices, Inc. All rights reserved.
+ * Copyright (C) 2021-2025 Advanced Micro Devices, Inc. All rights reserved.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -111,7 +111,7 @@ namespace rocwmma
     }
 
     template <typename... Ts>
-    ROCWMMA_HOST_DEVICE constexpr decltype(auto) make_vector(Ts&&... ts)
+    ROCWMMA_HOST_DEVICE constexpr auto make_vector(Ts&&... ts)
     {
         // TODO: When HIP_vector_type becomes constexpr replace with non_native_vector type.
 
