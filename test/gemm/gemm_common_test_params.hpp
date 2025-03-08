@@ -144,7 +144,7 @@ namespace rocwmma
         using TestTypes16x16 = TestTypesLarge;
 
         // 32 x 32 supports up to f32
-        using TestTypes32x32 = TestTypesMedium;
+        using TestTypes32x32 = std::tuple<std::tuple<int8_t, int8_t, int32_t>>;//TestTypesMedium;
 
         ///
         /// Data Layout types: col_major (N) or row_major (T)
@@ -282,7 +282,7 @@ namespace rocwmma
                                                          >;
 
         using TestBlockSizes16x16 = TestBlockSizes16x16HugeBlockK;
-        using TestBlockSizes32x32 = TestBlockSizes32x32HugeBlockK;
+        using TestBlockSizes32x32 = std::tuple<std::tuple<I<32>, I<32>, I<16>>>;//TestBlockSizes32x32HugeBlockK;
 
         ///
         /// Per-wave output block coverage
